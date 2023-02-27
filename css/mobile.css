@@ -1,0 +1,54 @@
+@media (max-width: 640px) {
+    main {
+        height: 100vh;
+        width: 100vh;
+        flex-direction: column;
+
+    }
+
+    aside {
+        display: none;
+    }
+
+    .container-pesquisa {
+        display: none;
+    }
+
+    .container-perfil img {
+        display: none;
+    }
+
+    .container-perfil .icons {
+        display: none;
+    }
+
+    .title {
+        display: block;
+        font-size: 1.1rem;
+        color: white;
+    }
+
+    .container-perfil {
+        background-color: rgba(0, 113, 34, 0.753);
+    }
+
+    .pesquisa-celular {
+        display: flex;
+        align-items: center;
+        height: 6.8%;
+        justify-content: space-around;
+        background-color: rgba(0, 113, 34, 0.753);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+        border-bottom: 2px solid #2525252f;
+        color: white;
+
+    }
+
+    .icons-celular {
+        display: flex;
+        font-size: 1.3rem;
+        gap: 40px;
+        color: white;
+
+    }
+}

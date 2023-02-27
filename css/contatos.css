@@ -1,0 +1,78 @@
+.container-contatos {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #2525252f;
+    overflow: auto;
+    max-height: 100vh;
+}
+
+.contato {
+    display: flex;
+    width: 100%;
+    padding: 11px;
+    cursor: pointer;
+    gap: 17px;
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    text-align: center;
+}
+
+.nome-tempo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tempo {
+    font-size: .8rem;
+    color: #aaa;
+}
+
+span {
+    color: #aaa;
+    font-size: .9rem;
+}
+.nome {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #111;
+}
+
+.mensagem {
+    text-align: start;
+    color: #aaa;
+    font-size: 0.9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+}
+
+.contato:hover {
+    background-color: #f5f5f5;
+}
+
+
+.mensagem-notificacao {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notificacao {
+    background-color: #25d366;
+    color: white;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .75rem;
+}

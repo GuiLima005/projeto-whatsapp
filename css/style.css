@@ -1,16 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+    height: 100vh;
+    background: linear-gradient(#00a884 0%, #00a884 127px, #d9dbd5 127px, #d9dbd5 100%);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 94.7%;
+    width: 97.5%;
+    background-color: white;
+}
+
+.pesquisa-celular {
+    display: none;
+}
+
+.title {
+    display: none;
+}
+
+.icons-celular {
+    display: none;
+}
+
+article {
+    flex: 30%;
+    overflow: hidden;
+}
+
+aside {
+    flex: 70%;
+    overflow: hidden;
+}
+
+.icons {
+    display: flex;
+    gap: 30px;
+    font-size: 1.6rem;
+}
+
+.container-mensagens {
+    height: 82%;
+}
+
+.container-texto {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 9%;
+    justify-content: space-between;
+    background-color: #85858533;
+    padding: 15px;
+}
+
+.container-texto input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 85%;
+    padding-left: 50px;
+
+}
+
+.icons-texto {
+    display: flex;
+    gap: 15px;
+    font-size: 1.8rem;
 }

@@ -1,0 +1,23 @@
+.container-perfil {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ededed;
+    align-items: center;
+    height: 9%;
+    width: 100%;
+    padding: 15px;
+    border-right: 1px solid #2525252f;
+
+}
+
+.fotos-perfil {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.icone-perfil {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
