@@ -1,7 +1,7 @@
 .container-pesquisa {
     display: flex;
     align-items: center;
-    height: 6.8%;
+    height: 45px;
     justify-content: space-evenly;
     border-right: 1px solid #2525252f;
     border-bottom: 1px solid #2525252f;
