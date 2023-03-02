@@ -1,0 +1,25 @@
+.container-texto {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    background-color: #85858533;
+    padding: 15px;
+}
+
+.container-texto input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 85%;
+    padding-left: 50px;
+
+}
+
+.icons-texto {
+    display: flex;
+    gap: 15px;
+    font-size: 1.8rem;
+}

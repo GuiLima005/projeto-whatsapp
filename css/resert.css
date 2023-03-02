@@ -14,3 +14,7 @@ li {
 a {
     text-decoration: none;
 }
+/* ::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px!important;
+} */

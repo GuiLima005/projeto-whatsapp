@@ -1,0 +1,30 @@
+.container-mensagens {
+    height: 86.5%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-image: url(../img/fundo-whats.png);
+    background-color: #efeae2;
+    background-repeat:repeat;
+    background-position: left;
+    background-size: contain;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+.mensagem-contatos {
+    padding: 15px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 7.5px;
+    max-width: 40%;
+}
+.minha-mensagem {
+    place-self: end;
+    margin: 5px;
+    padding: 15px;
+    background-color: #d9fdd3;
+    border-radius: 7.5px;
+    max-width: 45%;
+}
