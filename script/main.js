@@ -4,15 +4,12 @@ import { contatos } from "./contatos.js"
 
 const criarContato = (contato) => {
 
-    const div = document.createElement('div')
-    div.classList.add('contato')
-
-    const container = document.createElement('div')
-    container.classList.add('contato')
+    const contatos = document.createElement('div')
+    contatos.classList.add('contato')
 
     const img = document.createElement('img')
     img.classList.add('fotos-perfil')
-    img.src = `./img/${contato.image}`
+    img.src = `./${contato.image}`
 
     const detalhe = document.createElement('div')
     detalhe.classList.add('detalhes')
@@ -33,17 +30,19 @@ const criarContato = (contato) => {
 
     const mensagem = document.createElement('p')
     mensagem.classList.add('mensagem')
-    mensagem.textContent = contato.content
+    mensagem.textContent = contato.description
 
-    container.append(container, img, detalhe, nomeTempo, nome, tempo, mensagemNotificacao, mensagem)
+    nomeTempo.append(nome, tempo)
+    mensagemNotificacao.append(mensagem)
+    detalhe.append(nomeTempo, mensagemNotificacao)
+    contatos.append(img, detalhe)
 
-    return div
+    return contatos
 }
 
 const carregarContatos = () => {
-    const div = document.getElementById('container')
+    const novoContainer = document.getElementById('container-contatos')
     const contatosContainer = contatos.map(criarContato)
-
-    div.replaceChildren(...contatosContainer)
+    novoContainer.replaceChildren(...contatosContainer)
 }
 carregarContatos()
