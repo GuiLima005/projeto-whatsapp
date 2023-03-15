@@ -2,10 +2,13 @@
 
 import { contatos } from "./contatos.js"
 
-const criarContato = (contato) => {
+const criarContato = (contato, indice) => {
 
     const contatos = document.createElement('div')
     contatos.classList.add('contato')
+    contatos.id = 'contato'
+    contatos.onclick = () => carregarConversas(indice)
+
 
     const img = document.createElement('img')
     img.classList.add('fotos-perfil')
@@ -45,4 +48,42 @@ const carregarContatos = () => {
     const contatosContainer = contatos.map(criarContato)
     novoContainer.replaceChildren(...contatosContainer)
 }
+
+const getConversas = (mensagem) => {
+
+    const DivMessageSent = document.createElement('div')
+
+
+    let messageSent = document.createElement('p')
+    let time = document.createElement('span')
+
+    if (mensagem.sender == "me") {
+        DivMessageSent.classList.add('container-mensagens')
+        messageSent.classList.add('minha-mensagem')
+        time.classList.add('tempo')
+        messageSent.textContent = mensagem.content
+        time.textContent = mensagem.time
+
+    } else {
+        DivMessageSent.classList.add('container-mensagens')
+        messageSent.classList.add('mensagem-contatos')
+        time.classList.add('time')
+        messageSent.textContent = mensagem.content
+        time.textContent = mensagem.time
+    }
+
+    DivMessageSent.append(messageSent)
+    messageSent.append(time)
+
+    return DivMessageSent
+}
+
+const carregarConversas = (indice) => {
+    const messageContact = document.getElementById('container-mensagens')
+
+    const message = contatos[indice].messages.map(getConversas)
+
+    messageContact.replaceChildren(...message)
+}
+
 carregarContatos()

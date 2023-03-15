@@ -19,6 +19,8 @@
     background-color: white;
     border-radius: 7.5px;
     max-width: 40%;
+    overflow: hidden;
+
 }
 .minha-mensagem {
     place-self: end;
@@ -28,4 +30,5 @@
     background-color: #d9fdd3;
     border-radius: 7.5px;
     max-width: 45%;
+    overflow: hidden;
 }
