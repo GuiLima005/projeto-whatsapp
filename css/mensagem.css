@@ -15,18 +15,17 @@
 }
 .mensagem-contatos {
     padding: 15px;
-    margin: 5px;
+    margin: 25px;
     background-color: white;
     border-radius: 7.5px;
     max-width: 40%;
     overflow: hidden;
-
 }
 .minha-mensagem {
     place-self: end;
     text-align: end;
-    margin: 5px;
     padding: 15px;
+    margin: 25px;
     background-color: #d9fdd3;
     border-radius: 7.5px;
     max-width: 45%;

@@ -51,31 +51,27 @@ const carregarContatos = () => {
 
 const getConversas = (mensagem) => {
 
-    const DivMessageSent = document.createElement('div')
 
 
     let messageSent = document.createElement('p')
     let time = document.createElement('span')
 
     if (mensagem.sender == "me") {
-        DivMessageSent.classList.add('container-mensagens')
         messageSent.classList.add('minha-mensagem')
         time.classList.add('tempo')
         messageSent.textContent = mensagem.content
         time.textContent = mensagem.time
 
     } else {
-        DivMessageSent.classList.add('container-mensagens')
         messageSent.classList.add('mensagem-contatos')
         time.classList.add('time')
         messageSent.textContent = mensagem.content
         time.textContent = mensagem.time
     }
 
-    DivMessageSent.append(messageSent)
     messageSent.append(time)
 
-    return DivMessageSent
+    return messageSent
 }
 
 const carregarConversas = (indice) => {
