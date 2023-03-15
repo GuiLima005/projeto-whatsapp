@@ -51,8 +51,6 @@ const carregarContatos = () => {
 
 const getConversas = (mensagem) => {
 
-
-
     let messageSent = document.createElement('p')
     let time = document.createElement('span')
 
