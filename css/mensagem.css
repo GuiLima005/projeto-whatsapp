@@ -18,8 +18,10 @@
     margin: 25px;
     background-color: white;
     border-radius: 7.5px;
-    max-width: 47%;
+    max-width: 40%;
     overflow: hidden;
+    width: fit-content;
+
 }
 .minha-mensagem {
     place-self: end;
@@ -30,4 +32,5 @@
     border-radius: 7.5px;
     max-width: 45%;
     overflow: hidden;
+    width: fit-content;
 }

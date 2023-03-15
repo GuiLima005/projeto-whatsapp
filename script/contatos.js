@@ -76,7 +76,7 @@ export const contatos = [
             {
                 "sender": "Mark Johnson",
                 "content": "Yes, we're making good progress. We should be able to deliver it on schedule.",
-                "timestamp": "2022-02-15T13:15:00.000Z"
+                "time": "2022-02-15T13:15:00.000Z"
             }
         ]
     },

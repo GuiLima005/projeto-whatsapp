@@ -8,6 +8,8 @@ const criarContato = (contato, indice) => {
     contatos.classList.add('contato')
     contatos.id = 'contato'
     contatos.onclick = () => carregarConversas(indice)
+    // contato.onclick = () => mobile(indice)
+
 
 
     const img = document.createElement('img')
@@ -52,6 +54,7 @@ const carregarContatos = () => {
 const getConversas = (mensagem) => {
 
     let messageSent = document.createElement('p')
+    let br = document.createElement('br')
     let time = document.createElement('span')
 
     if (mensagem.sender == "me") {
@@ -67,7 +70,7 @@ const getConversas = (mensagem) => {
         time.textContent = mensagem.time
     }
 
-    messageSent.append(time)
+    messageSent.append(br,time)
 
     return messageSent
 }
@@ -80,4 +83,16 @@ const carregarConversas = (indice) => {
     messageContact.replaceChildren(...message)
 }
 
+const mobile = () => {
+    let mobil = document.getElementById('contato')
+    let container = document.getElementById('aside')
+
+    mobil.addEventListener('click', function() {
+        if(container.style.display == 'block') {
+            container.style.display = 'none'
+        } else {
+            container.style.display = 'block'
+        }
+    })
+}
 carregarContatos()
