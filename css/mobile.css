@@ -6,12 +6,12 @@
 
     }
 
-    article{
-        display: none;
-    }
-    /* aside {
+    /* article{
         display: none;
     } */
+    aside {
+        display: none;
+    }
 
     .container-pesquisa {
         display: none;

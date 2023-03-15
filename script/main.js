@@ -83,16 +83,16 @@ const carregarConversas = (indice) => {
     messageContact.replaceChildren(...message)
 }
 
-const mobile = () => {
-    let mobil = document.getElementById('contato')
-    let container = document.getElementById('aside')
+// const mobile = () => {
+//     let mobil = document.getElementById('contato')
+//     let container = document.getElementById('aside')
 
-    mobil.addEventListener('click', function() {
-        if(container.style.display == 'block') {
-            container.style.display = 'none'
-        } else {
-            container.style.display = 'block'
-        }
-    })
-}
+//     mobil.addEventListener('click', function() {
+//         if(container.style.display == 'block') {
+//             container.style.display = 'none'
+//         } else {
+//             container.style.display = 'block'
+//         }
+//     })
+// }
 carregarContatos()
