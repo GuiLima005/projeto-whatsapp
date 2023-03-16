@@ -1,6 +1,6 @@
 'use strict'
 
-import { contatos } from "./contatos.js"
+import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023/recursos/contatos.js"
 
 const criarContato = (contato, indice) => {
 
