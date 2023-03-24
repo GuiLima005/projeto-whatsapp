@@ -8,9 +8,6 @@ const criarContato = (contato, indice) => {
     contatos.classList.add('contato')
     contatos.id = 'contato'
     contatos.onclick = () => carregarConversas(indice)
-    // contato.onclick = () => mobile(indice)
-
-
 
     const img = document.createElement('img')
     img.classList.add('fotos-perfil')
@@ -45,7 +42,14 @@ const criarContato = (contato, indice) => {
     return contatos
 }
 
-const carregarContatos = () => {
+const carregarContatos = async () => {
+
+    const url = `http://localhost:8080/v1/senai/conta?number=11966578996`
+
+    const response = await fetch(url)
+    const data = await response.json()
+    let contatos = data.contatos
+
     const novoContainer = document.getElementById('container-contatos')
     const contatosContainer = contatos.map(criarContato)
     novoContainer.replaceChildren(...contatosContainer)
@@ -83,16 +87,6 @@ const carregarConversas = (indice) => {
     messageContact.replaceChildren(...message)
 }
 
-// const mobile = () => {
-//     let mobil = document.getElementById('contato')
-//     let container = document.getElementById('aside')
 
-//     mobil.addEventListener('click', function() {
-//         if(container.style.display == 'block') {
-//             container.style.display = 'none'
-//         } else {
-//             container.style.display = 'block'
-//         }
-//     })
-// }
+
 carregarContatos()
