@@ -4,14 +4,22 @@ import { contatos } from "https://fernandoleonid.github.io/whatsApp-senai-1-2023
 
 const criarContato = (contato, indice) => {
 
+
     const contatos = document.createElement('div')
     contatos.classList.add('contato')
     contatos.id = 'contato'
-    contatos.onclick = () => carregarConversas(indice)
+    contatos.onclick = () => {
+
+        localStorage.setItem("foto", img.id)
+        localStorage.setItem("nome", nome.id)
+        carregarConversas(indice)  
+}
+
 
     const img = document.createElement('img')
     img.classList.add('fotos-perfil')
     img.src = `./${contato.image}`
+    img.id = contato.image
 
     const detalhe = document.createElement('div')
     detalhe.classList.add('detalhes')
@@ -22,6 +30,7 @@ const criarContato = (contato, indice) => {
     const nome = document.createElement('h4')
     nome.classList.add('nome')
     nome.textContent = contato.name
+    nome.id = contato.name
 
     const tempo = document.createElement('p')
     tempo.classList.add('tempo')
@@ -40,6 +49,16 @@ const criarContato = (contato, indice) => {
     contatos.append(img, detalhe)
 
     return contatos
+}
+
+const criarHeaderConversa = () => {
+    let nomeConversa = localStorage.getItem("nome")
+    let novoNome = document.querySelector("#nome-conversa")
+    novoNome.innerHTML = nomeConversa
+
+    let foto = localStorage.getItem("foto")
+    let novaFoto = document.querySelector("#foto-conversa")
+    novaFoto.src = foto
 }
 
 const carregarContatos = async () => {
@@ -74,7 +93,7 @@ const getConversas = (mensagem) => {
         time.textContent = mensagem.time
     }
 
-    messageSent.append(br,time)
+    messageSent.append(br, time)
 
     return messageSent
 }
@@ -82,11 +101,10 @@ const getConversas = (mensagem) => {
 const carregarConversas = (indice) => {
     const messageContact = document.getElementById('container-mensagens')
 
-    const message = contatos[indice].messages.map(getConversas)
+    const message = contatos[indice].messages.map(getConversas, criarHeaderConversa())
+
+
 
     messageContact.replaceChildren(...message)
 }
-
-
-
 carregarContatos()

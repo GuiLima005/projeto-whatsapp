@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(#00a884 0%, #00a884 127px, #d9dbd5 127px, #d9dbd5 100%);
+    
 }
 
 main {
