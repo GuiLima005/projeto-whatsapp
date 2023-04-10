@@ -63,7 +63,7 @@ const criarHeaderConversa = () => {
 
 const carregarContatos = async () => {
 
-    const url = `http://localhost:8080/v1/senai/conta?number=11966578996`
+    const url = `https://api-whatsapp-oe6v.onrender.com/v1/senai/conta?number=11966578996`
 
     const response = await fetch(url)
     const data = await response.json()
